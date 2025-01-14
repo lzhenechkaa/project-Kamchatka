@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Экскурсии</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+    <header class="header">
+        <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        <h1 class="header__title">Экскурсии</h1>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
+                <li class="header__item"><a class="header__link" href="travel.html">Экскурсии</a></li>
+                <li class="header__item"><a class="header__link" href="resrv.html">Бронирование</a></li>
+                <li class="header__item"><a class="header__link" href="info.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <main class="main">
+        <div class="main__content">
+            <section class="tours">
+                <h2 class="tours__title">Предлагаемые экскурсии:</h2>
+                <ul class="tours__list">
+                    <li class="tours__item">
+                        <span class="tours__name">Прогулка на долину гейзеров - 15.07</span>
+                        <p class="tours__description">Приглашаем вас на незабываемую прогулку в уникальную Долину гейзеров — одно из самых удивительных природных чудес Камчатки и объект Всемирного наследия ЮНЕСКО. Во время экскурсии вы сможете насладиться грандиозными видами на колоритные геотермальные источники, и, конечно, гейзеры, которые извергаются с невероятной силой и регулярностью. Опытный гид расскажет об уникальных геологических процессах, происходящих в этом районе, о флоре и фауне, обитающих здесь. Прогулка по живописным тропам перенесет вас в другой мир, полный природных чудес и захватывающих ощущений. Это путешествие не оставит равнодушным никого — от любителей природы до ценителей экотуризма!</p>
+                        <img class="tours__image" src="images/dolinaeizerov2.jpg" alt="Изображение" width="250" height="250">
+
+                    </li>
+                    <li class="tours__item">
+                        <span class="tours__name">Завораживающая экскурсия на Курильское озеро - 26.07</span>
+                        <p class="tours__description">Погрузитесь в атмосферу спокойствия и природной красоты на экскурсии к Курильскому озеру, знаменитому своим богатым биоразнообразием и захватывающими пейзажами. Это озеро — дом для многих видов птиц, в том числе знаменитых японских журавлей, а также рыбы, что делает это место настоящим раем для орнитологов и любителей природы. Во время прогулки по озеру вы насладитесь чудесными видами на окружающие горы и вулканы, а также сможете посетить местные горячие источники. Ваш гид поделится интересными историями о формировании озера и о том, как здесь, на стыке природы и культуры, живут коренные народы. Завораживающие виды и полное единение с природой сделают это путешествие незабываемым!</p>
+                        <img class="tours__image" src="images/kyrilskoeoz1.jpg" alt="Изображение" width="250" height="250">
+                    </li>
+                    <li class="tours__item">
+                        <span class="tours__name">Пешеходная экскурсия на вулкан Авачинский - 08.08</span>
+                        <p class="tours__description">Приготовьтесь к настоящему приключению с пешеходной экскурсией на вулкан Авачинский, который является одним из самых знаменитых и активных на Камчатке! Во время восхождения вы сможете насладиться потрясающими панорамами на окрестные горы и бухты, а также прикоснуться к истории вулканической активности региона. Гид расскажет о геологических особенностях вулкана, его извержениях и о том, как формация таких гигантов влияет на климат и природу местности. По пути вы встретите уникальные природные явления и, возможно, даже увидите диких животных. Наблюдение за игрой света на поверхности вулкана в закатные часы создаст поистине волшебную атмосферу. Эта экскурсия подарит вам не только заряд адреналина, но и массу впечатлений о красоте и мощи камчатской природы!</p>
+                        <img class="tours__image" src="images/avachinskii1.jpg" alt="Изображение" width="250" height="250">
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <section class="footer__contact">
+            <h2 class="footer__title">Контакты</h2>
+            <img class="footer__logo" src="images/logo.png" alt="Логотип" width="100" height="100">
+            <p class="footer__email">Email: info@kamchatka-tours.ru</p>
+            <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
+            <p class="footer__map-text">Мы на карте:</p>
+            <img class="footer__map" src="images/otmetka.PNG" alt="Карта" width="350" height="300">
+        </section>
+    </footer>
 </body>
-</html>
+</html>    

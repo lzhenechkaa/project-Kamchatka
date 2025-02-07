@@ -8,8 +8,10 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <header class="header">
-            <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        <header class="header container">
+            <a href="index.html" class="header__logo-link">
+                <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+            </a>
             <h1 class="header__title">О нас</h1>
             <nav class="header__nav">
                 <ul class="header__list">
@@ -21,7 +23,7 @@
             </nav>
         </header>
         
-<main class="main">
+<main class="main container">
     <div class="main__content">
         <section class="about">
             <img class="about__image" src="images/onas.png" alt="О нас" width="650" height="450">
@@ -62,36 +64,38 @@
             <h2 class="reviews__title">Отзывы</h2>
             <ul class="reviews__list">
                 <li class="reviews__item">
+                    <img class="reviews__image" src="images/otzyv1.jpg" alt="Отзыв Петра">
                     <span class="reviews__author">Петр:</span>
-                    <p class="reviews__text">"Поход на вулкан Авачинский был настоящим испытанием, но оно того стоило! Подъем на вершину
-                        потребовал физических усилий, но виды с высоты просто потрясающие. Гид был очень внимательным 
-                        и поддерживал нас на протяжении всего пути. Немного не хватало информации о геологических 
-                        аспектах вулкана, но в целом это была незабываемая экскурсия. Обязательно рекомендую тем, 
-                        кто любит активный отдых на природе!"</p>
-                    <img class="reviews__image" src="images/otzyv1.jpg" alt="Отзыв Петра" width="550" height="350">
+                    <p class="reviews__text">"Поход на вулкан Авачинский был настоящим испытанием, но оно того стоило! Подъем на вершину потребовал физических усилий, но виды с высоты просто потрясающие. Гид был очень внимательным и поддерживал нас на протяжении всего пути..."</p>
                 </li>
                 <li class="reviews__item">
+                    <img class="reviews__image" src="images/otzyv.jpg" alt="Отзыв Елены">
                     <span class="reviews__author">Елена:</span>
-                    <p class="reviews__text">"Посещение Курильского озера стало одним из самых ярких моментов моей поездки на Камчатку! 
-                        Уникальная красота этого места, спокойная гладь озера и великолепные горные волны - это 
-                        просто волшебство. Мы увидели много птиц и даже встретили лосей! Гид рассказал об экосистеме 
-                        озера, и это добавило увлекательности в экскурсию. Это место обязательно стоит увидеть!"</p>
-                    <img class="reviews__image" src="images/otzyv.jpg" alt="Отзыв Елены" width="500" height="450">
+                    <p class="reviews__text">"Посещение Курильского озера стало одним из самых ярких моментов моей поездки на Камчатку! Уникальная красота этого места, спокойная гладь озера и великолепные горные волны - это просто волшебство..."</p>
                 </li>
             </ul>
         </section>
     </div>
 </main>
 
-<footer class="footer">
+<footer class="footer container">
     <section class="footer__contact">
-        <h2 class="footer__title">Контакты</h2>
-        <img class="footer__logo" src="images/logo.png" alt="Логотип" width="100" height="100">
-        <p class="footer__email">Email: info@kamchatka-tours.ru</p>
-        <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
-        <p class="footer__map-text">Мы на карте:</p>
-        <img class="footer__map" src="images/otmetka.PNG" alt="Карта" width="350" height="300">
+        <h2 class="footer__title">Связь с нами</h2>
+        <span class="tittle1">Мы на карте:</span>
+    </div>
+    <div class="footer__map-link">
+        <a href="https://clck.ru/3GBiby" target="_blank">
+            <img src="images/place.PNG" alt="Карта" width="350" height="350" style="border: none; margin-top: 10px;">
+        </a>
+    </div>
+        <p class="footer__email"><a href="mailto:info@kamchatka-tours.ru">Email: info@kamchatka-tours.ru</a></p>
+        <p class="footer__phone"><a href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a></p>
+        <span class="tittle2">Наши социальные сети:</span>
+        <div class="footer__socials">
+            <a href="https://web.telegram.org" target="_blank">Telegram</a>
+            <a href="https://vk.com" target="_blank">Вконтакте</a>
     </section>
+    <p class="footer__privacy-policy"><a href="privacy.html">Политика обработки персональных данных</a></p>
 </footer>
 </body>
 </html>

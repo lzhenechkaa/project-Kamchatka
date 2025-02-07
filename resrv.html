@@ -8,19 +8,21 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-        <header class="header">
-            <img src="images/logo.png" alt="Логотип" class="header__logo" width="200" height="200"> 
-            <h1 class="header__title">Бронирование</h1> 
+        <header class="header container">
+            <a href="index.html" class="header__logo-link">
+                <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+            </a>
+            <h1 class="header__title">Бронирование</h1>
             <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item"> <a href="index.html" class="header__nav-link">Главная</a></li>
-                    <li class="header__nav-item"> <a href="travel.html" class="header__nav-link">Экскурсии</a></li>
-                    <li class="header__nav-item"> <a href="resrv.html" class="header__nav-link">Бронирование</a></li>
-                    <li class="header__nav-item"> <a href="info.html" class="header__nav-link">О нас</a></li>
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
+                    <li class="header__item"><a class="header__link" href="travel.html">Экскурсии</a></li>
+                    <li class="header__item"><a class="header__link" href="resrv.html">Бронирование</a></li>
+                    <li class="header__item"><a class="header__link" href="info.html">О нас</a></li>
                 </ul>
             </nav>
-        </header> 
-        <main class="main">
+        </header>
+        <main class="main container">
             <div class="main__container">
                 <section class="faq">
                     <h2 class="faq__question">Как я могу забронировать экскурсию?</h2>
@@ -64,16 +66,25 @@
                 </section>
             </div>
         </main>    
-        <footer class="footer">
+        <footer class="footer container">
             <section class="footer__contact">
-                <h2 class="footer__title">Контакты</h2>
-                <img src="images/logo.png" alt="Логотип" class="footer__logo" width="100" height="100">
-                <p class="footer__email">Email: info@kamchatka-tours.ru</p>
-                <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
-                <p class="footer__map-title">Мы на карте:</p>
-                <img src="images/otmetka.PNG" alt="Карта" class="footer__map" width="350" height="300">
+                <h2 class="footer__title">Связь с нами</h2>
+                <span class="tittle1">Мы на карте:</span>
+            </div>
+            <div class="footer__map-link">
+                <a href="https://clck.ru/3GBiby" target="_blank">
+                    <img src="images/place.PNG" alt="Карта" width="350" height="350" style="border: none; margin-top: 10px;">
+                </a>
+            </div>
+                <p class="footer__email"><a href="mailto:info@kamchatka-tours.ru">Email: info@kamchatka-tours.ru</a></p>
+                <p class="footer__phone"><a href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a></p>
+                <span class="tittle2">Наши социальные сети:</span>
+                <div class="footer__socials">
+                    <a href="https://web.telegram.org" target="_blank">Telegram</a>
+                    <a href="https://vk.com" target="_blank">Вконтакте</a>
             </section>
-        </footer>     
+            <p class="footer__privacy-policy"><a href="privacy.html">Политика обработки персональных данных</a></p>
+        </footer> 
     </body>
 </body>
 </html>

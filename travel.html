@@ -8,8 +8,10 @@
         <link rel="stylesheet" href="styles/style.css">
     </head>
     <body>
-    <header class="header">
-        <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+    <header class="header container">
+        <a href="index.html" class="header__logo-link">
+            <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        </a>
         <h1 class="header__title">Экскурсии</h1>
         <nav class="header__nav">
             <ul class="header__list">
@@ -21,41 +23,56 @@
         </nav>
     </header>
     
-    <main class="main">
+    <main class="main container">
         <div class="main__content">
             <section class="tours">
                 <h2 class="tours__title">Предлагаемые экскурсии:</h2>
                 <ul class="tours__list">
                     <li class="tours__item">
-                        <span class="tours__name">Прогулка на долину гейзеров - 15.07</span>
+                        <span class="tours__date">Прогулка на долину гейзеров</span>
                         <p class="tours__description">Приглашаем вас на незабываемую прогулку в уникальную Долину гейзеров — одно из самых удивительных природных чудес Камчатки и объект Всемирного наследия ЮНЕСКО. Во время экскурсии вы сможете насладиться грандиозными видами на колоритные геотермальные источники, и, конечно, гейзеры, которые извергаются с невероятной силой и регулярностью. Опытный гид расскажет об уникальных геологических процессах, происходящих в этом районе, о флоре и фауне, обитающих здесь. Прогулка по живописным тропам перенесет вас в другой мир, полный природных чудес и захватывающих ощущений. Это путешествие не оставит равнодушным никого — от любителей природы до ценителей экотуризма!</p>
                         <img class="tours__image" src="images/dolinaeizerov2.jpg" alt="Изображение" width="250" height="250">
+                        <p class="tours__price">Стоимость: от 1000 руб.</p>
+                        <button class="tours__book-button">Забронировать</button>
 
                     </li>
                     <li class="tours__item">
-                        <span class="tours__name">Завораживающая экскурсия на Курильское озеро - 26.07</span>
+                        <span class="tours__date">Завораживающая экскурсия на Курильское озеро</span>
                         <p class="tours__description">Погрузитесь в атмосферу спокойствия и природной красоты на экскурсии к Курильскому озеру, знаменитому своим богатым биоразнообразием и захватывающими пейзажами. Это озеро — дом для многих видов птиц, в том числе знаменитых японских журавлей, а также рыбы, что делает это место настоящим раем для орнитологов и любителей природы. Во время прогулки по озеру вы насладитесь чудесными видами на окружающие горы и вулканы, а также сможете посетить местные горячие источники. Ваш гид поделится интересными историями о формировании озера и о том, как здесь, на стыке природы и культуры, живут коренные народы. Завораживающие виды и полное единение с природой сделают это путешествие незабываемым!</p>
                         <img class="tours__image" src="images/kyrilskoeoz1.jpg" alt="Изображение" width="250" height="250">
+                        <p class="tours__price">Стоимость: от 1000 руб.</p>
+                        <button class="tours__book-button">Забронировать</button>
                     </li>
                     <li class="tours__item">
-                        <span class="tours__name">Пешеходная экскурсия на вулкан Авачинский - 08.08</span>
+                        <span class="tours__date">Пешеходная экскурсия на вулкан Авачинский</span>
                         <p class="tours__description">Приготовьтесь к настоящему приключению с пешеходной экскурсией на вулкан Авачинский, который является одним из самых знаменитых и активных на Камчатке! Во время восхождения вы сможете насладиться потрясающими панорамами на окрестные горы и бухты, а также прикоснуться к истории вулканической активности региона. Гид расскажет о геологических особенностях вулкана, его извержениях и о том, как формация таких гигантов влияет на климат и природу местности. По пути вы встретите уникальные природные явления и, возможно, даже увидите диких животных. Наблюдение за игрой света на поверхности вулкана в закатные часы создаст поистине волшебную атмосферу. Эта экскурсия подарит вам не только заряд адреналина, но и массу впечатлений о красоте и мощи камчатской природы!</p>
                         <img class="tours__image" src="images/avachinskii1.jpg" alt="Изображение" width="250" height="250">
+                        <p class="tours__price">Стоимость: от 1000 руб.</p>
+                        <button class="tours__book-button">Забронировать</button>
                     </li>
                 </ul>
             </section>
         </div>
     </main>
     
-    <footer class="footer">
+    <footer class="footer container">
         <section class="footer__contact">
-            <h2 class="footer__title">Контакты</h2>
-            <img class="footer__logo" src="images/logo.png" alt="Логотип" width="100" height="100">
-            <p class="footer__email">Email: info@kamchatka-tours.ru</p>
-            <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
-            <p class="footer__map-text">Мы на карте:</p>
-            <img class="footer__map" src="images/otmetka.PNG" alt="Карта" width="350" height="300">
+            <h2 class="footer__title">Связь с нами</h2>
+            <span class="tittle1">Мы на карте:</span>
+        </div>
+        <div class="footer__map-link">
+            <a href="https://clck.ru/3GBiby" target="_blank">
+                <img src="images/place.PNG" alt="Карта" width="350" height="350" style="border: none; margin-top: 10px;">
+            </a>
+        </div>
+            <p class="footer__email"><a href="mailto:info@kamchatka-tours.ru">Email: info@kamchatka-tours.ru</a></p>
+            <p class="footer__phone"><a href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a></p>
+            <span class="tittle2">Наши социальные сети:</span>
+            <div class="footer__socials">
+                <a href="https://web.telegram.org" target="_blank">Telegram</a>
+                <a href="https://vk.com" target="_blank">Вконтакте</a>
         </section>
+        <p class="footer__privacy-policy"><a href="privacy.html">Политика обработки персональных данных</a></p>
     </footer>
 </body>
 </html>    

@@ -1,0 +1,32 @@
+.facts {
+    margin-bottom: 40px;
+    background-color: white; 
+    padding: 20px;
+    border-radius: 8px; 
+}
+.facts__title {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.facts__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+}
+.facts__item {
+    width: calc(50% - 10px); 
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+.facts__icon {
+    display: block;
+    margin: 0 auto 10px; 
+}

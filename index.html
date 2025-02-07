@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Камчатка в сердце</title>
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/style.css">
-    </head>
-    <body>
-    <header class="header">
-        <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камчатка в сердце</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header class="header container">
+        <a href="index.html" class="header__logo-link">
+            <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+        </a>
         <h1 class="header__title">Камчатка в сердце</h1>
         <nav class="header__nav">
             <ul class="header__list">
@@ -20,66 +24,98 @@
             </ul>
         </nav>
     </header>
-   
-    <main class="main">
+
+    <main class="main container">
         <div class="main__content">
             <section class="about">
-                <p class="about__text"> Мы рады приветствовать вас в мире захватывающих приключений и уникальных природных красот Камчатки! Наша команда профессиональных гидов предлагает вам незабываемые экскурсии, которые позволят вам увидеть лучшие места нашего удивительного края: величественные вулканы, прозрачные озера и пышные леса, а также познакомиться с уникальной флорой и фауной региона.</p>
+                <p class="about__text"> Мы рады приветствовать вас в мире захватывающих приключений и уникальных
+                    природных красот Камчатки! Наша команда профессиональных гидов предлагает вам незабываемые
+                    экскурсии, которые позволят вам увидеть лучшие места нашего удивительного края: величественные
+                    вулканы, прозрачные озера и пышные леса, а также познакомиться с уникальной флорой и фауной региона.</p>
             </section>
-    
+
             <section class="tours">
                 <h2 class="tours__title">Ближайшие экскурсии:</h2>
                 <ul class="tours__list">
                     <li class="tours__item">
-                        <span class="tours__date">Прогулка на долину гейзеров - 15.05</span>
-                        <p class="tours__description">Откройте для себя удивительный мир природных чудес, где гейзеры и горячие источники создают уникальный ландшафт, полный захватывающих зрелищ и звуков.</p>
+                        <span class="tours__date">Прогулка на долину гейзеров - <span class="tour__date-highlight">15.05</span></span>
                         <img class="tours__image" src="images/dolinaeizerov1.jpg" alt="Гид" width="250" height="250">
+                        <p class="tours__description">Откройте для себя удивительный мир природных чудес, где гейзеры и
+                            горячие источники создают уникальный ландшафт, полный захватывающих зрелищ и звуков.</p>
+                        <p class="tours__price">Стоимость: от 1000 руб.</p>
+                        <button class="tours__book-button">Забронировать</button>
+                        <p class="tours__more-info">
+                            <a href="travel.html" class="tours__more-link">Узнать подробнее</a>
+                        </p>
                     </li>
                     <li class="tours__item">
-                        <span class="tours__date">Завораживающая экскурсия на Курильское озеро - 28.05</span>
-                        <p class="tours__description">Погрузитесь в атмосферу спокойствия и красоты, наслаждаясь живописными видами на озеро, окруженное величественными горами и богатой флорой и фауной.</p>
+                        <span class="tours__date">Завораживающая экскурсия на Курильское озеро - <span class="tour__date-highlight">28.05</span></span>
                         <img class="tours__image" src="images/kyrilskoeoz.jpg" alt="Гид" width="250" height="250">
+                        <p class="tours__description">Погрузитесь в атмосферу спокойствия и красоты, наслаждаясь
+                            живописными видами на озеро, окруженное величественными горами и богатой флорой и фауной.</p>
+                        <p class="tours__price">Стоимость: от 1800 руб.</p>
+                        <button class="tours__book-button">Забронировать</button>
+                        <p class="tours__more-info">
+                            <a href="travel.html" class="tours__more-link">Узнать подробнее</a>
+                        </p>
                     </li>
                     <li class="tours__item">
-                        <span class="tours__date">Пешеходная экскурсия на вулкан Авачинский - 01.06</span>
-                        <p class="tours__description">Присоединяйтесь к захватывающему восхождению на один из самых активных вулканов Камчатки, где вас ждут потрясающие панорамы и уникальные геологические образования.</p>
+                        <span class="tours__date">Пешеходная экскурсия на вулкан Авачинский - <span class="tour__date-highlight">01.06</span></span>
                         <img class="tours__image" src="images/avachinskii.jpg" alt="Гид" width="250" height="250">
+                        <p class="tours__description">Присоединяйтесь к захватывающему восхождению на один из самых
+                            активных вулканов Камчатки, где вас ждут потрясающие панорамы и уникальные геологические
+                            образования.</p>
+                        <p class="tours__price">Стоимость: от 2500 руб.</p>
+                        <button class="tours__book-button">Забронировать</button>
+                        <p class="tours__more-info">
+                            <a href="travel.html" class="tours__more-link">Узнать подробнее</a>
+                        </p>
                     </li>
                 </ul>
             </section>
-    
+
             <section class="guides">
-                <h2 class="guides__title">Наши гиды</h2>
+                <h2 class="guides__title">Наши гиды:</h2>
                 <ul class="guides__list">
                     <li class="guides__item">
                         <span class="guides__name">Наталья</span>
-                        <p class="guides__description">Опытный гид с более чем 10-летним стажем работы на Камчатке. Она специализируется на экотуризме и активно занимается защитой окружающей среды. Анна прекрасно знает местную флору и фауну и может рассказать о редких видах животных и растений, а также о важности сохранения экосистемы региона. Ее экскурсии всегда насыщены интересными фактами и увлекательными историями о природе Камчатки.</p>
+                        <p class="guides__description">Опытный гид с более чем 10-летним стажем работы на Камчатке. Она специализируется на экотуризме и активно занимается защитой окружающей среды. Ее экскурсии всегда насыщены интересными фактами и увлекательными историями о природе Камчатки.</p>
                         <img class="guides__image" src="images/gid1.png" alt="Гид" width="220" height="280">
                     </li>
                     <li class="guides__item">
-                        <span class="guides__name">Нина</span>
-                        <p class="guides__description">Профессиональный гид и геолог, которая увлечена изучением вулканов и геологических процессов. Она проводит экскурсии по вулканическим районам Камчатки, объясняя участникам, как образовались знаменитые вулканы региона. Екатерина также делится своими знаниями о геологических явлениях и истории формирования ландшафта, что делает ее экскурсии не только познавательными, но и увлекательными.</p>
+                        <span class="guides__name">Екатерина</span>
+                        <p class="guides__description">Профессиональный гид и геолог, которая увлечена изучением вулканов и геологических процессов. Она проводит экскурсии по вулканическим районам Камчатки, объясняя участникам, как образовались знаменитые вулканы региона.</p>
                         <img class="guides__image" src="images/gid2.png" alt="Гид" width="220" height="290">
                     </li>
                     <li class="guides__item">
                         <span class="guides__name">Александра</span>
-                        <p class="guides__description">Сертифицированный экскурсовод и культуролог, которая фокусируется на культурном наследии и традициях коренных народов Камчатки. Она проводит экскурсии по историческим местам, рассказывая о культуре, обычаях и образе жизни местных жителей. Мария также организует мастер-классы по традиционным ремеслам, что позволяет участникам глубже понять уникальную культуру региона.</p>
+                        <p class="guides__description">Сертифицированный экскурсовод и культуролог, которая фокусируется на культурном наследии и традициях коренных народов Камчатки. Она проводит экскурсии по историческим местам, рассказывая о культуре, обычаях и образе жизни местных жителей.</p>
                         <img class="guides__image" src="images/gid3.png" alt="Гид" width="220" height="290">
                     </li>
                 </ul>
             </section>
         </div>
     </main>
-    
-    <footer class="footer">
+
+    <footer class="footer container">
         <section class="footer__contact">
-            <h2 class="footer__title">Контакты</h2>
-            <img class="footer__logo" src="images/logo.png" alt="Логотип" width="100" height="100">
-            <p class="footer__email">Email: info@kamchatka-tours.ru</p>
-            <p class="footer__phone">Телефон: +7 (123) 456-78-90</p>
-            <p class="footer__map-text">Мы на карте:</p>
-            <img class="footer__map" src="images/otmetka.PNG" alt="Карта" width="350" height="300">
+            <h2 class="footer__title">Связь с нами</h2>
+            <span class="tittle1">Мы на карте:</span>
+        </div>
+        <div class="footer__map-link">
+            <a href="https://clck.ru/3GBiby" target="_blank">
+                <img src="images/place.PNG" alt="Карта" width="350" height="350" style="border: none; margin-top: 10px;">
+            </a>
+        </div>
+            <p class="footer__email"><a href="mailto:info@kamchatka-tours.ru">Email: info@kamchatka-tours.ru</a></p>
+            <p class="footer__phone"><a href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a></p>
+            <span class="tittle2">Наши социальные сети:</span>
+            <div class="footer__socials">
+                <a href="https://web.telegram.org" target="_blank">Telegram</a>
+                <a href="https://vk.com" target="_blank">Вконтакте</a>
         </section>
+        <p class="footer__privacy-policy"><a href="privacy.html">Политика обработки персональных данных</a></p>
     </footer>
 </body>
-</html>    
+
+</html>

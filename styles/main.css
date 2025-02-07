@@ -1,4 +1,169 @@
-.main{
-    background-color: hsl(0, 0%, 23%) ;
+.main {
+    padding: 40px 0;
+}
+.main__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.about {
+    background: #ffffff;
+    padding: 30px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    font-size: 20px;
+    font-family: 'Inter'; 
+}
+.tours {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.tours__title {
+    font-size: 35px;
+    margin-bottom: 15px;
+    color: #25282F;
+}
+.tours__list {
+    list-style: none;
+    padding: 0;
+}
+.tours__item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.tours__item:hover {
+    transform: scale(1.02);
+}
+.tours__date {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    align-items: flex-start;
+    font-family: 'Montserrat';
+}
+.tour__date-highlight {
+    color: #FF4500;
+}
+.tours__image {
+    width: 450px;
+    height: 300px; 
+    border-radius: 8px;
+    object-fit: cover; 
+    margin-bottom: 10px;
+}
+.tours__description {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.tours__price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.tours__button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.tours__book-button {
+    background-color: #FFBD4E;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.tours__book-button:hover {
+    background-color: #0b2203; 
+}
+.tours__more-info {
+    font-size: 0.8em; 
+    color: gray;
+    margin-top: 10px;
+}
+.tours__more-link {
+    text-decoration: none;
+}
+.tours__more-link:hover {
+    text-decoration: underline;
+}
+.faq {
+    background-color: #ffffff; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    margin-bottom: 15px; 
+    padding: 15px; 
+}
+.faq__question {
+    font-size: 28px;
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-family: 'Monserrat';
+}
+.faq__answer {
+    font-size: 16px; 
+    margin: 0;
+}
+.reviews {
+    margin-bottom: 40px;
+    background-color: #f9f9f9; 
+    padding: 20px;
+    border-radius: 8px;
+}
+.reviews__title {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.reviews__list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.reviews__item {
+    background-color: white;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    padding: 15px; 
+    width: 48%; 
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+    display: flex; 
+    flex-direction: column; 
+}
+.reviews__author {
+    font-weight: bold;
+    display: block; 
+    margin-bottom: 10px; 
+}
+.reviews__image {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.reviews__text {
+    flex-grow: 1;
+    margin-top: 10px;
+}
+.about__image {
+    width: 450px;
+    height: 300px; 
+    border-radius: 8px;
+    object-fit: cover; 
+    margin-bottom: 10px;
 }

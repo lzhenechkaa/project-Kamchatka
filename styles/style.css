@@ -10,3 +10,5 @@
 @import "main.css";
 @import 'guides.css';
 @import 'facts.css';
+/* Подключение стилей отвечающих за адаптив */
+@import "adaptability.css";

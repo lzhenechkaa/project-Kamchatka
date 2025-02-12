@@ -1,12 +1,8 @@
-body {
-    margin: 0;
-    background-color: #29343E;
-}
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #25282F;
+    background-color: #4b5763;
     padding: 20px;
     color: white;
     border-radius: 8px;
@@ -32,7 +28,7 @@ body {
     font-size: 22px;
     display: flex;
     justify-content: flex-end;
-    font-family: 'Gdadugi.ttf';
+    font-family: 'Montserrat';
 }
 .header__item {
     margin-left: 20px;

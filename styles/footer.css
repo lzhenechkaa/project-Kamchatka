@@ -1,50 +1,36 @@
 .footer {
-    background-color: #25282F;
+    background-color: #4b5763;
     color: white;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
 }
-.footer__title {
-    margin-bottom: 15px;
+.footer__body {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-start;
 }
-.footer__contact {
-    margin-bottom: 15px;
+.footer__map,
+.footer__info {
+    flex: 1; 
+    margin: 0 20px;
 }
-.footer__email,
-.footer__phone {
-    margin: 5px 0;
+.footer__map {
+    margin-left: 50px;
 }
-.footer__email a,
-.footer__phone a {
-    color: white;
+.footer__info {
+    text-align: left;
+    padding: 0 20px;
 }
-.footer__email a:hover,
-.footer__phone a:hover {
+.footer__contacts {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 0;
+}
+.footer__info {
+    text-align: left;
+}
+.footer__link {
     text-decoration: none;
-}
-.footer__map-link {
-    margin: 20px 0; 
-}
-.footer__map-link a {
-    display: inline-block; 
-}
-.footer__socials {
-    margin: 10px 0;
-}
-.footer__socials a {
     color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-.footer__privacy-policy {
-    margin-top: 10px;
-    font-size: 12px;
-}
-.footer__privacy-policy a {
-    color: white;
-    text-decoration: underline;
-}
-.footer__privacy-policy a:hover {
-    text-decoration: none;
 }

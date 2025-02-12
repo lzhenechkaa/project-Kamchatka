@@ -13,9 +13,9 @@
     .header {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Центрируем элементы по горизонтали */
-        padding: 20px 40px; /* Уменьшаем отступы */
-        width: 100%; /* Полная ширина карточки */
+        align-items: center; 
+        padding: 20px 40px; 
+        width: 100%; 
     }
     .header__logo {
         width: 120px;
@@ -46,94 +46,100 @@
         padding: 8px;
     }
     .main {
-        padding: 15px 5px; /* Уменьшение отступов */
+        padding: 15px 5px;
     }
 
     .main__content {
         display: grid; 
-        grid-template-columns: 1fr; /* Одна колонка для карточек */
-        gap: 10px; /* Уменьшение отступов между элементами */
+        grid-template-columns: 1fr; 
+        gap: 10px;
     }
 
     .about {
-        padding: 15px; /* Уменьшение отступов */
-        width: 71%; /* Полная ширина карточки */
-        font-size: 16px; /* Еще большее уменьшение размера шрифта */
+        padding: 15px; 
+        width: 71%;
+        font-size: 16px;
     }
 
     .tours {
-        padding: 10px; /* Уменьшение отступов */
+        padding: 10px;
+    }
+    .tours1 {
+        padding: 10px;
+        width: 71%;
     }
 
     .tours__title {
-        font-size: 24px; /* Уменьшение размера шрифта */
+        font-size: 24px;
     }
 
     .tours__item {
-        padding: 15px; /* Уменьшение отступов */
-        width: 71%; /* Полная ширина карточки */
+        padding: 15px;
+        width: 71%;
     }
-
     .tours__image {
-        width: 250px; /* Уменьшение ширины изображения */
-        height: 150px; /* Уменьшение высоты изображения */
+        width: 250px;
+        height: 150px;
     }
 
     .tours__description, 
     .tours__price, 
     .tours__date {
-        font-size: 14px; /* Уменьшение размера шрифта */
+        font-size: 14px;
     }
 
     .faq {
         background-color: #ffffff; 
-        padding: 10px; /* Уменьшение отступов */
-        border-radius: 6px; /* Уменьшение радиуса углов */
-        width: 71%; /* Полная ширина карточки */
+        padding: 10px;
+        border-radius: 6px;
+        width: 71%;
     }
 
     .faq__question {
-        font-size: 20px; /* Уменьшение размера шрифта */
+        font-size: 20px;
     }
 
     .faq__answer {
-        font-size: 12px; /* Уменьшение размера шрифта */
+        font-size: 12px;
     }
 
     .reviews {
-        padding: 10px; /* Уменьшение отступов */
-        margin-bottom: 20px; /* Уменьшение нижнего отступа */
-        width: 71%; /* Полная ширина карточки */
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 71%;
     }
 
     .reviews__title {
-        font-size: 24px; /* Уменьшение размера шрифта */
+        font-size: 24px;
     }
 
     .reviews__item {
-        width: 100%; /* Полная ширина для отзывов */
-        margin-bottom: 10px; /* Уменьшение отступа между отзывами */
+        width: 100%;
+        margin-bottom: 10px;
     }
 
     .reviews__image {
-        height: 130px; /* Уменьшение высоты изображения отзыва */
+        height: 130px;
     }
 
     .reviews__text {
-        font-size: 12px; /* Уменьшение размера шрифта */
+        font-size: 12px;
     }
     .guides {
         padding: 15px; /* Уменьшение отступов */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Уменьшение тени */
-        width: 71%; /* Полная ширина карточки */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 71%;
+    }
+    .guides__title {
+        font-size: 24px;
     }
     .facts {
-        margin-bottom: 20px; /* Уменьшение отступа снизу */
-        padding: 15px; /* Уменьшение отступов */
-        width: 71%; /* Полная ширина карточки */
+        margin-bottom: 20px;
+        padding: 15px;
+        width: 71%;
     }
 
     .footer {
-        width: 100%; /* Полная ширина карточки */
+        width: 100%;
     }
 }

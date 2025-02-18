@@ -12,7 +12,7 @@
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
     font-size: 20px;
-    font-family: 'Inter'; 
+    font-family: 'Inter', sans-serif; 
 }
 .tours {
     padding: 20px;
@@ -60,7 +60,7 @@
     margin-bottom: 10px;
     font-weight: bold;
     align-items: flex-start;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', 'Arial', monospace;
 }
 .tour__date-highlight {
     color: #FF4500;
@@ -76,7 +76,7 @@
     font-size: 18px;
     text-align: center;
     margin-bottom: 10px;
-    font-family: 'Inter'; 
+    font-family: 'Inter', 'Arial', sans-serif; 
 }
 .tours__price {
     font-size: 18px;

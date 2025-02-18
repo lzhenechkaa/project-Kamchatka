@@ -16,7 +16,7 @@
     font-size: 45px;
     margin: 0 38px;
     color: #ecf0f1;
-    font-family: 'Denistina';
+    font-family: 'Denistina', 'Arial', sans-serif;
 }
 .header__nav {
     flex-grow: 1;
@@ -28,7 +28,7 @@
     font-size: 22px;
     display: flex;
     justify-content: flex-end;
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', 'Arial', monospace;
 }
 .header__item {
     margin-left: 20px;

@@ -3,6 +3,7 @@
     body {
         font-size: 14px;
         line-height: 20px;
+        max-width: 100%
     }
 
     /* Typography */
@@ -64,7 +65,7 @@
     .tours {
         padding: 10px;
     }
-    .tours1 {
+    .tourss {
         padding: 10px;
         width: 71%;
     }

@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const bookButtons = document.querySelectorAll('.main container'); // выбираем все кнопки "Забронировать"
+    const bookButtons = document.querySelectorAll('tourss'); // выбираем все кнопки "Забронировать"
     const popup = document.getElementById('popup'); // всплывающее окно
     const closeButton = document.getElementById('closePopup'); // кнопка закрытия всплывающего окна
     const form = document.getElementById('bookingForm'); // форма внутри попапа
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Обработчик события отправки формы
         form.addEventListener('submit', (event) => {
-            event.preventDefault(); // предотвращаем стандартное поведение формы
+            event.preventDefault();
             
             const inputs = form.querySelectorAll('input[required]'); // находим обязательные поля
             let allFilled = true;
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             if (allFilled) {
-                console.log('Форма успешно отправлена'); // Здесь можно добавить обработку данных формы
+                console.log('Форма успешно отправлена');
                 alert('Форма успешно отправлена!');
                 popup.style.display = 'none'; // закрываем окно после успешной отправки
                 form.reset(); // сбрасываем форму

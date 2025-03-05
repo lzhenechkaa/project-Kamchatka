@@ -17,7 +17,13 @@
 }
 .footer__map {
     margin-left: 50px;
+    transition: transform 0.4s;
 }
+
+.footer__map:hover {
+    transform: scale(1.05);
+}
+
 .footer__info {
     text-align: left;
     padding: 0 20px;

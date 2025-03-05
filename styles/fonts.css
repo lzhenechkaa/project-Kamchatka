@@ -26,13 +26,7 @@
         font-style: italic;
         font-display: swap;
 }
-@font-face {
-        font-family: "Gadugi";
-        src: url("../fonts/Gadugi.ttf");
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-}
+
 @font-face {
         font-family: "Inter";
         src: url("../fonts/Inter/Inter-ExtraLight.otf");

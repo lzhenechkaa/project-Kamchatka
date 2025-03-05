@@ -1,0 +1,62 @@
+.dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0; /* Верхний край экрана */
+  left: 0; /* Левый край экрана */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+.popup__form {
+  transform: translate(135%, 2%);
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+}
+.popup__title {
+  color: #29343E;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', 'Arial', monospace;
+}
+.popup__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.button--accent {
+  background-color: #29343E; 
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.button--accent:hover {
+  background-color: #161718; 
+}
+input, select {
+  margin-bottom: 15px;
+  padding: 10px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+}
+label {
+  color: #29343E;
+  margin-bottom: 5px; 
+}

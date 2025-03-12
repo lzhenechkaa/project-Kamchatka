@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const bookButtons = document.querySelectorAll('.main'); // выбираем все кнопки "Забронировать"
+    const bookButtons = document.querySelectorAll('.tours__book-button'); // выбираем все кнопки "Забронировать"
     const popup = document.getElementById('popup'); // всплывающее окно
     const closeButton = document.getElementById('closePopup'); // кнопка закрытия всплывающего окна
     const form = document.getElementById('bookingForm'); // форма внутри попапа

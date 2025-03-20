@@ -43,6 +43,18 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
+        /* 2. Динамический вывод карточек тегов. Часть 1 (Используем массив с данными) */
+        const cardsContainer = document.querySelector('.tours__list1');
+        if (cardsContainer) {
+        const dataTitleCards = ['Прогулка на долину гейзеров - 15.05', 'Завораживающая экскурсия на Курильское озеро - 28.05', 'Пешеходная экскурсия на вулкан Авачинский - 01.06'];
+        const titleCards = cardsContainer.querySelectorAll('.tours__date');
+        // console.log(titleCards); // проверка в консоли
+        titleCards.forEach((item, index) => {
+            item.textContent = dataTitleCards[index];
+        });
+
+    }
+
         // Обработчик события отправки формы
         form.addEventListener('submit', (event) => {
             event.preventDefault();
@@ -69,3 +81,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 });
+

@@ -1,64 +1,94 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    const bookButtons = document.querySelectorAll('.tours__book-button'); // выбираем все кнопки "Забронировать"
     const popup = document.getElementById('popup'); // всплывающее окно
     const closeButton = document.getElementById('closePopup'); // кнопка закрытия всплывающего окна
     const form = document.getElementById('bookingForm'); // форма внутри попапа
 
-    if (bookButtons.length > 0) { // проверяем существование кнопки в DOM
-        console.log('Константа bookButton существует');
-
-        /* 
-        *   Алгоритм
-        *
-        *   1. Начало.
-        *   2. Проверка условия: Навешиваем слушатель событий на click страницы и ожидаем нажатие на кнопку "Забронировать".
-        *     2.1. Да: Появляется всплывающее окно бронирования, где пользователь будет вводить свои необходимые данные.
-        *     2.1.1. Проверка условия: Если нажата кнопка "Закрыть" (крестик) в форме.
-        *       2.1.1.1. Да: Закрыть всплывающее окно и сбросить значения полей ввода в форме.
-        *       2.1.1.2. Нет: Проверка на заполнение полей формы.
-        *     2.1.2. Проверка условия: Заполнение всех полей
-        *       2.1.2.1. Все поля заполнены: Обработка данных и отправка формы + сообщение об успешной отправке.
-        *       2.1.2.2. Некоторые поля не заполнены: Сообщение об ошибке, попросить заполнить все обязательные поля.
-        *     2.2. Нет: Конец.
-        *   4. Конец
-        * 
-        *   Блок-схема: /images/diagram.png
-        */
-        
-        bookButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                console.log('Кнопка "Забронировать" нажата');
-                popup.style.display = 'block'; // открываем всплывающее окно
-            });
-        });
-
-        // Обработчик события клика на кнопку закрытия
-        if (closeButton) {
-            closeButton.addEventListener('click', () => {
-                popup.style.display = 'none'; // закрываем всплывающее окно
-                form.reset(); // сбрасываем значения полей ввода в форме
-            });
+    // 1. Динамический вывод карточек тегов
+    const cardList = document.querySelector('.tours__list1');
+    
+    /* Моковые данные */
+    const cardsData = [
+        {
+            iconAlt: 'Иконка для экскурсии 1',
+            iconUrl: 'images/dolinaeizerov1.jpg',
+            iconWidth: 250,
+            iconHeight: 250,
+            title: 'Прогулка на долину гейзеров - 15.05',
+            description: 'Откройте для себя удивительный мир природных чудес, где гейзеры и горячие источники создают уникальный ландшафт, полный захватывающих зрелищ и звуков. Обещаем, будет интересно!',
+            price: 'Стоимость: от 1000 руб.'
+        },
+        {
+            iconAlt: 'Иконка для экскурсии 2',
+            iconUrl: 'images/kyrilskoeoz1.jpg',
+            iconWidth: 250,
+            iconHeight: 250,
+            title: 'Завораживающая экскурсия на Курильское озеро - 28.05',
+            description: 'Погрузитесь в атмосферу спокойствия и красоты, наслаждаясь живописными видами на озеро, окруженное величественными горами и богатой флорой и фауной.',
+            price: 'Стоимость: от 1800 руб.'
+        },
+        {
+            iconAlt: 'Иконка для экскурсии 3',
+            iconUrl: 'images/avachinskii.jpg',
+            iconWidth: 250,
+            iconHeight: 250,
+            title: 'Пешеходная экскурсия на вулкан Авачинский - 01.06',
+            description: 'Присоединяйтесь к захватывающему восхождению на один из самых активных вулканов Камчатки, где вас ждут потрясающие панорамы и уникальные геологические образования.',
+            price: 'Стоимость: от 2500 руб.'
         }
-
-        /* 2. Динамический вывод карточек тегов. Часть 1 (Используем массив с данными) */
-        const cardsContainer = document.querySelector('.tours__list1');
-        if (cardsContainer) {
-        const dataTitleCards = ['Прогулка на долину гейзеров - 15.05', 'Завораживающая экскурсия на Курильское озеро - 28.05', 'Пешеходная экскурсия на вулкан Авачинский - 01.06'];
-        const titleCards = cardsContainer.querySelectorAll('.tours__date');
-        // console.log(titleCards); // проверка в консоли
-        titleCards.forEach((item, index) => {
-            item.textContent = dataTitleCards[index];
-        });
-
+    ];
+    
+    // Функция для создания карточки
+    const createCard = (iconUrl, iconAlt, iconWidth, iconHeight, title, description, price) => {
+        return `<li class="tours__item">
+                    <span class="tours__date">${title}</span>
+                    <img class="tours__image" src="${iconUrl}" alt="${iconAlt}" width="${iconWidth}" height="${iconHeight}">
+                    <p class="tours__description">${description}</p>
+                    <p class="tours__price">${price}</p>
+                    <button class="tours__book-button">Забронировать</button>
+                    <p class="tours__more-info">
+                        <a href="travel.html" class="tours__more-link">Узнать подробнее</a>
+                    </p>
+                </li>`;
     }
 
-        // Обработчик события отправки формы
+    // Создаем карточки
+    for (const cardKey in cardsData) {
+        const card = cardsData[cardKey];
+        const cardElement = createCard(
+            card.iconUrl, 
+            card.iconAlt, 
+            card.iconWidth, 
+            card.iconHeight, 
+            card.title, 
+            card.description, 
+            card.price
+        );
+        cardList.insertAdjacentHTML('beforeend', cardElement);
+    }
+
+    // 2. Обработка кнопок "Забронировать" с использованием делегирования событий
+    cardList.addEventListener('click', (event) => {
+        if (event.target.classList.contains('tours__book-button')) {
+            console.log('Кнопка "Забронировать" нажата');
+            popup.style.display = 'block'; // открываем всплывающее окно
+        }
+    });
+
+    // Обработчик события клика на кнопку закрытия
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            popup.style.display = 'none'; // закрываем всплывающее окно
+            form.reset(); // сбрасываем значения полей ввода в форме
+        });
+    }
+
+    // Обработчик события отправки формы
+    if (form) {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-            
+
             const inputs = form.querySelectorAll('input[required]'); // находим обязательные поля
             let allFilled = true;
 
@@ -78,7 +108,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert('Пожалуйста, заполните все обязательные поля.'); // сообщение об ошибке
             }
         });
-
     }
 });
-

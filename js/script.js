@@ -106,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .catch(error => {
                 console.error('Ошибка при загрузке данных:', error);
             });
-    
 
 
 

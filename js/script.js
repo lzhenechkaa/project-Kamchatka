@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById('bookingForm'); // форма внутри попапа
 
     // 1. Динамический вывод карточек тегов
-    const cardList = document.querySelector('.tours__list1');
+    //const cardList = document.querySelector('.tours__list1');
     
     /* Моковые данные */
-    const cardsData = [
+    /*const cardsData = [
         {
             iconAlt: 'Иконка для экскурсии 1',
             iconUrl: 'images/dolinaeizerov1.jpg',
@@ -66,7 +66,52 @@ document.addEventListener("DOMContentLoaded", () => {
             card.price
         );
         cardList.insertAdjacentHTML('beforeend', cardElement);
-    }
+    }*/
+
+        //Задание 6.
+        const cardList = document.querySelector('.tours__list1');
+        const apiUrl = 'data.json';
+
+        const createCard = (iconUrl, iconAlt, iconWidth, iconHeight, title, description, price) => {
+            return `<li class="tours__item">
+                        <span class="tours__date">${title}</span>
+                        <img class="tours__image" src="${iconUrl}" alt="${iconAlt}" width="${iconWidth}" height="${iconHeight}">
+                        <p class="tours__description">${description}</p>
+                        <p class="tours__price">${price}</p>
+                        <button class="tours__book-button">Забронировать</button>
+                        <p class="tours__more-info">
+                            <a href="travel.html" class="tours__more-link">Узнать подробнее</a>
+                        </p>
+                    </li>`;
+        }
+        // Загрузка данных с сервера
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // Данные
+                console.log(typeof (data)); // Тип полученных данных
+
+                // for (const item in data) {
+                //     const card = data[item];
+
+                //     const cardElement = createCard(card.link, card.icon, card.iconAlt, card.iconWidth, card.iconHeight, card.title, card.description);
+                //     cardList.insertAdjacentHTML('beforeend', cardElement);
+                // }
+
+                data.forEach(item => {
+                    const cardElement = createCard(item.iconUrl, item.iconAlt, item.iconWidth, item.iconHeight, item.title, item.description, item.price);
+                    cardList.insertAdjacentHTML('beforeend', cardElement);
+                });
+            })
+            .catch(error => {
+                console.error('Ошибка при загрузке данных:', error);
+            });
+    
+
+
+
+
+
 
     // 2. Обработка кнопок "Забронировать" с использованием делегирования событий
     cardList.addEventListener('click', (event) => {

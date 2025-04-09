@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,34 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header class="header container">
-        <a href="index.html" class="header__logo-link">
-            <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
-        </a>
-        <h1 class="header__title">Экскурсии</h1>
-        <nav class="header__nav">
-            <ul class="header__list">
-                <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
-                <li class="header__item"><a class="header__link" href="travel.html">Экскурсии</a></li>
-                <li class="header__item"><a class="header__link" href="resrv.html">Бронирование</a></li>
-                <li class="header__item"><a class="header__link" href="info.html">О нас</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="main container">
-        <div class="main__content">
-            <section class="tours">
-                <h2 class="tours__title">Предлагаемые экскурсии:</h2>
-                <ul class="tours__list">
-                     <!-- <li class="tours__item">
+<body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <div class="content">
+        <header class="header container">
+            <a href="index.html" class="header__logo-link">
+                <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+            </a>
+            <h1 class="header__title">Экскурсии</h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
+                    <li class="header__item"><a class="header__link" href="travel.html">Экскурсии</a></li>
+                    <li class="header__item"><a class="header__link" href="resrv.html">Бронирование</a></li>
+                    <li class="header__item"><a class="header__link" href="info.html">О нас</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main container">
+            <div class="main__content">
+                <section class="tours">
+                    <h2 class="tours__title">Предлагаемые экскурсии:</h2>
+                    <ul class="tours__list">
+                        <!-- <li class="tours__item">
                         <span class="tours__date">Прогулка на долину гейзеров</span>
                         <p class="tours__description">Приглашаем вас на незабываемую прогулку в уникальную Долину гейзеров — одно из самых удивительных природных чудес Камчатки и объект Всемирного наследия ЮНЕСКО. Во время экскурсии вы сможете насладиться грандиозными видами на колоритные геотермальные источники, и, конечно, гейзеры, которые извергаются с невероятной силой и регулярностью. Опытный гид расскажет об уникальных геологических процессах, происходящих в этом районе, о флоре и фауне, обитающих здесь. Прогулка по живописным тропам перенесет вас в другой мир, полный природных чудес и захватывающих ощущений. Это путешествие не оставит равнодушным никого — от любителей природы до ценителей экотуризма!</p>
                         <img class="tours__image" src="images/dolinaeizerov1.jpg" alt="Изображение" width="250" height="250">
@@ -49,44 +56,44 @@
                         <p class="tours__price">Стоимость: от 1000 руб.</p>
                         <button class="tours__book-button">Забронировать</button>
                     </li> -->
-                </ul>
-            </section>
-        </div>
-    </main>
-    
-    <footer class="footer container">
-        <h2 class="footer__tittle">Связь с нами</h2>
-        <div class="footer__body">
-            <div class="footer__map">
-                <div class="footer__map-link">
-                    <a class="footer__link" href="https://clck.ru/3GBiby" target="_blank">
-                        <img src="images/place.PNG" alt="Карта" width="350" height="350"
-                            style="border: none; margin-top: 10px" />
-                    </a>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer container">
+            <h2 class="footer__tittle">Связь с нами</h2>
+            <div class="footer__body">
+                <div class="footer__map">
+                    <div class="footer__map-link">
+                        <a class="footer__link" href="https://clck.ru/3GBiby" target="_blank">
+                            <img src="images/place.PNG" alt="Карта" width="350" height="350"
+                                style="border: none; margin-top: 10px" />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__subtittle">Контакты:</div>
+                    <ul class="footer__contacts">
+                        <li class="footer__contact-item">
+                            <a class="footer__link" href="mailto:info@kamchatka-tours.ru">Email:
+                                info@kamchatka-tours.ru</a>
+                        </li>
+                        <li class="footer__contact-item">
+                            <a class="footer__link" href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a>
+                        </li>
+                    </ul>
+                    <div class="footer__subtittle">Наши социальные сети:</div>
+                    <div class="footer__socials">
+                        <a class="footer__link" href="https://web.telegram.org" target="_blank">Telegram</a>
+                        <a class="footer__link" href="https://vk.com" target="_blank">Вконтакте</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer__info">
-                <div class="footer__subtittle">Контакты:</div>
-                <ul class="footer__contacts">
-                    <li class="footer__contact-item">
-                        <a class="footer__link" href="mailto:info@kamchatka-tours.ru">Email:
-                            info@kamchatka-tours.ru</a>
-                    </li>
-                    <li class="footer__contact-item">
-                        <a class="footer__link" href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a>
-                    </li>
-                </ul>
-                <div class="footer__subtittle">Наши социальные сети:</div>
-                <div class="footer__socials">
-                    <a class="footer__link" href="https://web.telegram.org" target="_blank">Telegram</a>
-                    <a class="footer__link" href="https://vk.com" target="_blank">Вконтакте</a>
-                </div>
-            </div>
-        </div>
-        <p class="footer__privacy-policy">
-            <a href="privacy.html">Политика обработки персональных данных</a>
-        </p>
-    </footer>
+            <p class="footer__privacy-policy">
+                <a href="privacy.html">Политика обработки персональных данных</a>
+            </p>
+        </footer>
 </body>
 
 <!--/ Форма -->
@@ -127,7 +134,9 @@
         </form>
     </div>
 </div>
+</div>
 <!--/ Форма -->
 
 <script src="js/scripttravel.js"></script>
+
 </html>

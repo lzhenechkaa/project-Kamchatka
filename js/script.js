@@ -113,12 +113,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // 2. Обработка кнопок "Забронировать" с использованием делегирования событий
-    cardList.addEventListener('click', (event) => {
-        if (event.target.classList.contains('tours__book-button')) {
-            console.log('Кнопка "Забронировать" нажата');
-            popup.style.display = 'block'; // открываем всплывающее окно
-        }
-    });
+    if (cardList != null)
+    {
+        cardList.addEventListener('click', (event) => {
+         if (event.target.classList.contains('tours__book-button')) {
+             console.log('Кнопка "Забронировать" нажата');
+             popup.style.display = 'block'; // открываем всплывающее окно
+         }
+        });
+    }
 
     // Обработчик события клика на кнопку закрытия
     if (closeButton) {
@@ -152,5 +155,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 alert('Пожалуйста, заполните все обязательные поля.'); // сообщение об ошибке
             }
         });
+    }
+
+
+    const preloader = document.querySelector('.preloader');
+    const content = document.querySelector('.content');
+    if (preloader && content) {
+        setTimeout(() => {
+            // Скрываем прелоадер
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+
+            // Показываем контент
+            content.style.display = 'block';
+
+            // Удаляем элемент из DOM
+            preloader.remove();
+        }, 3000); // Задержка 3 секунды
     }
 });

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,113 +8,141 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
-    <header class="header container">
-        <a href="index.html" class="header__logo-link">
-            <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
-        </a>
-        <h1 class="header__title">О нас</h1>
-        <nav class="header__nav">
-            <ul class="header__list">
-                <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
-                <li class="header__item"><a class="header__link" href="travel.html">Экскурсии</a></li>
-                <li class="header__item"><a class="header__link" href="resrv.html">Бронирование</a></li>
-                <li class="header__item"><a class="header__link" href="info.html">О нас</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main class="main container">
-        <div class="main__content">
-            <section class="about">
-                <h2 class="about__title">О компании</h2>
-                <img class="about__image" src="images/onas.png" alt="О нас" width="650" height="450">
-                <p class="about__text">Компания "Камчатка в сердце" — это ваш надежный проводник в мир удивительных природных чудес и уникальной культуры Камчатки. Мы специализируемся на организации экскурсий, которые позволяют нашим клиентам не только насладиться великолепием местных ландшафтов, но и глубже понять экосистему и традиции коренных народов региона. С момента нашего основания мы накопили богатый опыт в проведении туров по самым живописным и интересным местам Камчатки. Наша команда состоит из высококвалифицированных гидов, которые не только обладают глубокими знаниями о природе и истории региона, но и страстно любят свою работу. Мы стремимся сделать каждую экскурсию уникальной и незабываемой, учитывая интересы и пожелания наших клиентов. Мы предлагаем разнообразные маршруты — от спокойных прогулок по живописным озерам до захватывающих восхождений на активные вулканы. Наша цель — создать атмосферу, в которой каждый сможет насладиться красотой природы, получить новые знания и ощутить дух приключений. "Камчатка в сердце" — это не просто экскурсии, это возможность открыть для себя сердце Камчатки и оставить в нем частичку своей души!</p>
-            </section>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
 
-            <section class="facts">
-                <h2 class="facts__title">Почему вы должны выбрать именно нас?</h2>
-                <ul class="facts__list">
-                    <li class="facts__item">
-                        <img class="facts__icon" src="images/bezopasnoct.png" alt="Безопасность и комфорт" width="80" height="80">
-                        <span class="facts__text">Безопасность и комфорт</span>
-                    </li>
-                    <li class="facts__item">
-                        <img class="facts__icon" src="images/podderzhka.png" alt="Поддержка 24/7" width="80" height="80">
-                        <span class="facts__text">Поддержка 24/7</span>
-                    </li>
-                    <li class="facts__item">
-                        <img class="facts__icon" src="images/opyt.png" alt="Опытные гиды" width="80" height="80">
-                        <span class="facts__text">Опытные гиды</span>
-                    </li>
-                    <li class="facts__item">
-                        <img class="facts__icon" src="images/friends.png" alt="Новые друзья" width="80" height="80">
-                        <span class="facts__text">Новые друзья</span>
-                    </li>
-                    <li class="facts__item">
-                        <img class="facts__icon" src="images/scorost.png" alt="Простота и скорость" width="80" height="80">
-                        <span class="facts__text">Простота и скорость</span>
-                    </li>
-                    <li class="facts__item">
-                        <img class="facts__icon" src="images/price.png" alt="Гарантия лучшей цены" width="80" height="80">
-                        <span class="facts__text">Гарантия лучшей цены</span>
-                    </li>
+    <div class="content">
+        <header class="header container">
+            <a href="index.html" class="header__logo-link">
+                <img class="header__logo" src="images/logo.png" alt="Логотип" width="200" height="200">
+            </a>
+            <h1 class="header__title">О нас</h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a class="header__link" href="index.html">Главная</a></li>
+                    <li class="header__item"><a class="header__link" href="travel.html">Экскурсии</a></li>
+                    <li class="header__item"><a class="header__link" href="resrv.html">Бронирование</a></li>
+                    <li class="header__item"><a class="header__link" href="info.html">О нас</a></li>
                 </ul>
-            </section>
+            </nav>
+        </header>
 
-            <section class="reviews">
-                <h2 class="reviews__title">Отзывы</h2>
-                <ul class="reviews__list">
-                    <li class="reviews__item">
-                        <img class="reviews__image" src="images/otzyv1.jpg" alt="Отзыв Петра">
-                        <span class="reviews__author">Петр:</span>
-                        <p class="reviews__text">"Поход на вулкан Авачинский был настоящим испытанием, но оно того стоило! Подъем на вершину потребовал физических усилий, но виды с высоты просто потрясающие. Гид был очень внимательным и поддерживал нас на протяжении всего пути..."</p>
-                    </li>
-                    <li class="reviews__item">
-                        <img class="reviews__image" src="images/otzyv.jpg" alt="Отзыв Елены">
-                        <span class="reviews__author">Елена:</span>
-                        <p class="reviews__text">"Посещение Курильского озера стало одним из самых ярких моментов моей поездки на Камчатку! Уникальная красота этого места, спокойная гладь озера и великолепные горные волны - это просто волшебство..."</p>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </main>
+        <main class="main container">
+            <div class="main__content">
+                <section class="about">
+                    <h2 class="about__title">О компании</h2>
+                    <img class="about__image" src="images/onas.png" alt="О нас" width="650" height="450">
+                    <p class="about__text">Компания "Камчатка в сердце" — это ваш надежный проводник в мир удивительных
+                        природных чудес и уникальной культуры Камчатки. Мы специализируемся на организации экскурсий,
+                        которые позволяют нашим клиентам не только насладиться великолепием местных ландшафтов, но и
+                        глубже понять экосистему и традиции коренных народов региона. С момента нашего основания мы
+                        накопили богатый опыт в проведении туров по самым живописным и интересным местам Камчатки. Наша
+                        команда состоит из высококвалифицированных гидов, которые не только обладают глубокими знаниями
+                        о природе и истории региона, но и страстно любят свою работу. Мы стремимся сделать каждую
+                        экскурсию уникальной и незабываемой, учитывая интересы и пожелания наших клиентов. Мы предлагаем
+                        разнообразные маршруты — от спокойных прогулок по живописным озерам до захватывающих восхождений
+                        на активные вулканы. Наша цель — создать атмосферу, в которой каждый сможет насладиться красотой
+                        природы, получить новые знания и ощутить дух приключений. "Камчатка в сердце" — это не просто
+                        экскурсии, это возможность открыть для себя сердце Камчатки и оставить в нем частичку своей
+                        души!</p>
+                </section>
 
-    <footer class="footer container">
-        <h2 class="footer__tittle">Связь с нами</h2>
-        <div class="footer__body">
-            <div class="footer__map">
-                <div class="footer__map-link">
-                    <a class="footer__link" href="https://clck.ru/3GBiby" target="_blank">
-                        <img src="images/place.PNG" alt="Карта" width="350" height="350"
-                            style="border: none; margin-top: 10px" />
-                    </a>
+                <section class="facts">
+                    <h2 class="facts__title">Почему вы должны выбрать именно нас?</h2>
+                    <ul class="facts__list">
+                        <li class="facts__item">
+                            <img class="facts__icon" src="images/bezopasnoct.png" alt="Безопасность и комфорт"
+                                width="80" height="80">
+                            <span class="facts__text">Безопасность и комфорт</span>
+                        </li>
+                        <li class="facts__item">
+                            <img class="facts__icon" src="images/podderzhka.png" alt="Поддержка 24/7" width="80"
+                                height="80">
+                            <span class="facts__text">Поддержка 24/7</span>
+                        </li>
+                        <li class="facts__item">
+                            <img class="facts__icon" src="images/opyt.png" alt="Опытные гиды" width="80" height="80">
+                            <span class="facts__text">Опытные гиды</span>
+                        </li>
+                        <li class="facts__item">
+                            <img class="facts__icon" src="images/friends.png" alt="Новые друзья" width="80" height="80">
+                            <span class="facts__text">Новые друзья</span>
+                        </li>
+                        <li class="facts__item">
+                            <img class="facts__icon" src="images/scorost.png" alt="Простота и скорость" width="80"
+                                height="80">
+                            <span class="facts__text">Простота и скорость</span>
+                        </li>
+                        <li class="facts__item">
+                            <img class="facts__icon" src="images/price.png" alt="Гарантия лучшей цены" width="80"
+                                height="80">
+                            <span class="facts__text">Гарантия лучшей цены</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="reviews">
+                    <h2 class="reviews__title">Отзывы</h2>
+                    <ul class="reviews__list">
+                        <li class="reviews__item">
+                            <img class="reviews__image" src="images/otzyv1.jpg" alt="Отзыв Петра">
+                            <span class="reviews__author">Петр:</span>
+                            <p class="reviews__text">"Поход на вулкан Авачинский был настоящим испытанием, но оно того
+                                стоило! Подъем на вершину потребовал физических усилий, но виды с высоты просто
+                                потрясающие. Гид был очень внимательным и поддерживал нас на протяжении всего пути..."
+                            </p>
+                        </li>
+                        <li class="reviews__item">
+                            <img class="reviews__image" src="images/otzyv.jpg" alt="Отзыв Елены">
+                            <span class="reviews__author">Елена:</span>
+                            <p class="reviews__text">"Посещение Курильского озера стало одним из самых ярких моментов
+                                моей поездки на Камчатку! Уникальная красота этого места, спокойная гладь озера и
+                                великолепные горные волны - это просто волшебство..."</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <footer class="footer container">
+            <h2 class="footer__tittle">Связь с нами</h2>
+            <div class="footer__body">
+                <div class="footer__map">
+                    <div class="footer__map-link">
+                        <a class="footer__link" href="https://clck.ru/3GBiby" target="_blank">
+                            <img src="images/place.PNG" alt="Карта" width="350" height="350"
+                                style="border: none; margin-top: 10px" />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <div class="footer__subtittle">Контакты:</div>
+                    <ul class="footer__contacts">
+                        <li class="footer__contact-item">
+                            <a class="footer__link" href="mailto:info@kamchatka-tours.ru">Email:
+                                info@kamchatka-tours.ru</a>
+                        </li>
+                        <li class="footer__contact-item">
+                            <a class="footer__link" href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a>
+                        </li>
+                    </ul>
+                    <div class="footer__subtittle">Наши социальные сети:</div>
+                    <div class="footer__socials">
+                        <a class="footer__link" href="https://web.telegram.org" target="_blank">Telegram</a>
+                        <a class="footer__link" href="https://vk.com" target="_blank">Вконтакте</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer__info">
-                <div class="footer__subtittle">Контакты:</div>
-                <ul class="footer__contacts">
-                    <li class="footer__contact-item">
-                        <a class="footer__link" href="mailto:info@kamchatka-tours.ru">Email:
-                            info@kamchatka-tours.ru</a>
-                    </li>
-                    <li class="footer__contact-item">
-                        <a class="footer__link" href="tel:+71234567890">Телефон: +7 (123) 456-78-90</a>
-                    </li>
-                </ul>
-                <div class="footer__subtittle">Наши социальные сети:</div>
-                <div class="footer__socials">
-                    <a class="footer__link" href="https://web.telegram.org" target="_blank">Telegram</a>
-                    <a class="footer__link" href="https://vk.com" target="_blank">Вконтакте</a>
-                </div>
-            </div>
-        </div>
-        <p class="footer__privacy-policy">
-            <a href="privacy.html">Политика обработки персональных данных</a>
-        </p>
-    </footer>
-
+            <p class="footer__privacy-policy">
+                <a href="privacy.html">Политика обработки персональных данных</a>
+            </p>
+        </footer>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

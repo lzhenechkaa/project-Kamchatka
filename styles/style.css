@@ -12,4 +12,8 @@
 @import 'facts.css';
 /* Подключение стилей отвечающих за адаптив */
 @import "adaptability.css";
-@import "popup.css"
+@import "popup.css";
+/* Подключение анимаций */
+@import "animation.css";
+/* Подключение предзагрузчика страницы */
+@import "preloader.css";

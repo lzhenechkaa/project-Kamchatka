@@ -1,5 +1,6 @@
 'use strict';
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const popup = document.getElementById('popup'); // всплывающее окно
     const closeButton = document.getElementById('closePopup'); // кнопка закрытия всплывающего окна
@@ -50,6 +51,12 @@ fetch(apiUrl)
     cardList.addEventListener('click', (event) => {
         if (event.target.classList.contains('tours__book-button')) {
             console.log('Кнопка "Забронировать" нажата');
+            const card = event.target.closest('.tours__item');
+            const tourTitle = card.querySelector('.tours__date').textContent;
+            
+            // Сохраняем название экскурсии в LocalStorage
+            localStorage.setItem('selectedTour', tourTitle);
+            
             popup.style.display = 'block'; // открываем всплывающее окно
         }
     });
@@ -64,29 +71,60 @@ fetch(apiUrl)
 
     // Обработчик события отправки формы
     if (form) {
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-            const inputs = form.querySelectorAll('input[required]'); // находим обязательные поля
-            let allFilled = true;
+        const inputs = form.querySelectorAll('input[required]'); // находим обязательные поля
+        let allFilled = true;
 
-            // Проверка заполнения всех обязательных полей
-            inputs.forEach(input => {
-                if (!input.value) {
-                    allFilled = false; // если хотя бы одно поле не заполнено
-                }
-            });
-
-            if (allFilled) {
-                console.log('Форма успешно отправлена');
-                alert('Форма успешно отправлена!');
-                popup.style.display = 'none'; // закрываем окно после успешной отправки
-                form.reset(); // сбрасываем форму
-            } else {
-                alert('Пожалуйста, заполните все обязательные поля.'); // сообщение об ошибке
+        // Проверка заполнения всех обязательных полей
+        inputs.forEach(input => {
+            if (!input.value) {
+                allFilled = false; // если хотя бы одно поле не заполнено
             }
         });
+
+        if (allFilled) {
+            // Собираем данные формы
+            const formData = {
+                tour: form.elements.tour.value,
+                date: form.elements.date.value,
+                adults: form.elements.adults.value,
+                children: form.elements.children.value,
+                lastName: form.elements.lastName.value,
+                phone: form.elements.phone.value,
+                email: form.elements.email.value,
+                selectedTour: localStorage.getItem('selectedTour') || ''
+            };
+
+            // Сохраняем в LocalStorage
+            localStorage.setItem('bookingData', JSON.stringify(formData));
+            
+            console.log('Форма успешно отправлена и сохранена');
+            alert('Форма успешно отправлена! Данные сохранены.');
+            popup.style.display = 'none'; // закрываем окно после успешной отправки
+            form.reset(); // сбрасываем форму
+        } else {
+            alert('Пожалуйста, заполните все обязательные поля.'); // сообщение об ошибке
+        }
+    });
+}
+
+// Автозаполнение формы при открытии, если есть сохраненные данные
+if (popup) {
+    const savedData = localStorage.getItem('bookingData');
+    
+    if (savedData) {
+        const formData = JSON.parse(savedData);
+        form.elements.tour.value = formData.tour;
+        form.elements.date.value = formData.date;
+        form.elements.adults.value = formData.adults;
+        form.elements.children.value = formData.children;
+        form.elements.lastName.value = formData.lastName;
+        form.elements.phone.value = formData.phone;
+        form.elements.email.value = formData.email;
     }
+}
 
     const preloader = document.querySelector('.preloader');
     const content = document.querySelector('.content');

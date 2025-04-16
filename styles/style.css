@@ -17,3 +17,4 @@
 @import "animation.css";
 /* Подключение предзагрузчика страницы */
 @import "preloader.css";
+@import "slider.css";

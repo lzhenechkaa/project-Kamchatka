@@ -113,13 +113,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // 2. Обработка кнопок "Забронировать" с использованием делегирования событий
-    if (cardList != null)
-    {
+    if (cardList != null) {
         cardList.addEventListener('click', (event) => {
-         if (event.target.classList.contains('tours__book-button')) {
-             console.log('Кнопка "Забронировать" нажата');
-             popup.style.display = 'block'; // открываем всплывающее окно
-         }
+            if (event.target.classList.contains('tours__book-button')) {
+                console.log('Кнопка "Забронировать" нажата');
+                const card = event.target.closest('.tours__item');
+                const tourTitle = card.querySelector('.tours__date').textContent;
+                
+                // Сохраняем название экскурсии в LocalStorage
+                localStorage.setItem('selectedTour', tourTitle);
+                
+                popup.style.display = 'block'; // открываем всплывающее окно
+            }
         });
     }
 
@@ -135,20 +140,38 @@ document.addEventListener("DOMContentLoaded", () => {
     if (form) {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
-
+    
             const inputs = form.querySelectorAll('input[required]'); // находим обязательные поля
             let allFilled = true;
-
+    
             // Проверка заполнения всех обязательных полей
             inputs.forEach(input => {
                 if (!input.value) {
                     allFilled = false; // если хотя бы одно поле не заполнено
                 }
             });
-
+    
             if (allFilled) {
-                console.log('Форма успешно отправлена');
-                alert('Форма успешно отправлена!');
+                const dateInput = form.elements.date.value;
+                const [day, month, year] = dateInput.split('-');
+                const isoDate = `${year}-${month}-${day}`;
+                // Собираем данные формы
+                const formData = {
+                    tour: form.elements.tour.value,
+                    date: isoDate,
+                    adults: form.elements.adults.value,
+                    children: form.elements.children.value,
+                    lastName: form.elements.lastName.value,
+                    phone: form.elements.phone.value,
+                    email: form.elements.email.value,
+                    selectedTour: localStorage.getItem('selectedTour') || ''
+                };
+    
+                // Сохраняем в LocalStorage
+                localStorage.setItem('bookingData', JSON.stringify(formData));
+                
+                console.log('Форма успешно отправлена и сохранена');
+                alert('Форма успешно отправлена! Данные сохранены.');
                 popup.style.display = 'none'; // закрываем окно после успешной отправки
                 form.reset(); // сбрасываем форму
             } else {
@@ -156,6 +179,37 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    function fillFormFromLocalStorage() {
+        const savedData = localStorage.getItem('bookingData');
+if (savedData) {
+    const formData = JSON.parse(savedData);
+            const form = document.getElementById('bookingForm');
+    
+            form.elements.tour.value = formData.tour || '';
+            
+            // Конвертируем дату из YYYY-MM-DD обратно в DD-MM-YYYY для отображения
+            if (formData.date) {
+                const [year, month, day] = formData.date.split('-');
+                form.elements.date.value = `${day}-${month}-${year}`;
+            } else {
+                form.elements.date.value = '';
+            }
+            
+            form.elements.adults.value = formData.adults || '';
+            form.elements.children.value = formData.children || '';
+            form.elements.lastName.value = formData.lastName || '';
+            form.elements.phone.value = formData.phone || '';
+            form.elements.email.value = formData.email || '';
+        }
+    }
+    
+    // Вызываем функцию при открытии попапа
+    document.querySelectorAll('.tours__book-button').forEach(button => {
+        button.addEventListener('click', fillFormFromLocalStorage);
+    });
+
+    localStorage.removeItem('bookingData'); // Удаляет только данные формы
 
 
     const preloader = document.querySelector('.preloader');
@@ -173,4 +227,21 @@ document.addEventListener("DOMContentLoaded", () => {
             preloader.remove();
         }, 3000); // Задержка 3 секунды
     }
-});
+
+    // Карусель (слайдер)
+    const guidesSlider = new Swiper('.guides-slider', {
+        slidesPerView: 3, // Показывать по два слайда
+        spaceBetween: 450, // Уменьшите расстояние между слайдами для лучшего отображения
+        initialSlide: 1,       // Начальный слайд (первый)
+        loop: true, // Бесконечная прокрутка
+        centeredSlides: true, // Отключите центрирование, чтобы слайды не обрезались
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        }
+    });
+    });

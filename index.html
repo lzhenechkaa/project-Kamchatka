@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Камчатка в сердце</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -49,34 +50,86 @@
 
                 <section class="guides">
                     <h2 class="guides__title">Наши гиды:</h2>
-                    <ul class="guides__list">
-                        <li class="guides__item">
-                            <span class="guides__name">Наталья</span>
-                            <p class="guides__description">Опытный гид с более чем 10-летним стажем работы на Камчатке.
-                                Она специализируется на экотуризме и активно занимается защитой окружающей среды. Ее
-                                экскурсии всегда насыщены интересными фактами и увлекательными историями о природе
-                                Камчатки.
-                            </p>
-                            <img class="guides__image" src="images/gid1.png" alt="Гид" width="220" height="280">
-                        </li>
-                        <li class="guides__item">
-                            <span class="guides__name">Екатерина</span>
-                            <p class="guides__description">Профессиональный гид и геолог, увлеченная изучением вулканов
-                                и геологических процессов. Она проводит экскурсии по вулканическим районам Камчатки,
-                                рассказывая интересные истории и объясняя участникам, как образовались знаменитые
-                                вулканы региона.</p>
-                            <img class="guides__image" src="images/gid2.png" alt="Гид" width="220" height="290">
-                        </li>
-                        <li class="guides__item">
-                            <span class="guides__name">Александра</span>
-                            <p class="guides__description">Сертифицированный экскурсовод и культуролог, фокусирующаяся
-                                на культурном наследии и традициях коренных народов Камчатки. Она проводит экскурсии по
-                                историческим местам, рассказывая о культуре, обычаях и образе жизни местных жителей.</p>
-                            <img class="guides__image" src="images/gid3.png" alt="Гид" width="220" height="290">
-                        </li>
-                    </ul>
+                    
+                    <div class="guides-slider swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Слайд 1 -->
+                            <div class="swiper-slide">
+                                <div class="guide-card">
+                                    <span class="guides__name">Наталья</span>
+                                    <p class="guides__description">Опытный гид с более чем 10-летним стажем работы на Камчатке.
+                                        Она специализируется на экотуризме и активно занимается защитой окружающей среды. Ее
+                                        экскурсии всегда насыщены интересными фактами и увлекательными историями о природе
+                                        Камчатки, скорее записывайтесь на экскурсию!</p>
+                                    <img class="guides__image" src="images/gid1.png" alt="Гид Наталья" width="220" height="280">
+                                </div>
+                            </div>
+                            
+                            <!-- Слайд 2 -->
+                            <div class="swiper-slide">
+                                <div class="guide-card">
+                                    <span class="guides__name">Екатерина</span>
+                                    <p class="guides__description">Профессиональный гид и геолог, увлеченная изучением вулканов
+                                        и геологических процессов. Она проводит захватывающие экскурсии по вулканическим районам Камчатки,
+                                        рассказывая не только интересные истории, но и объясняет участникам, как образовались знаменитые
+                                        вулканы региона. Ждем каждого!</p>
+                                    <img class="guides__image" src="images/gid2.png" alt="Гид Екатерина" width="220" height="290">
+                                </div>
+                            </div>
+                            
+                            <!-- Слайд 3 -->
+                            <div class="swiper-slide">
+                                <div class="guide-card">
+                                    <span class="guides__name">Александра</span>
+                                    <p class="guides__description">Сертифицированный экскурсовод и культуролог, фокусирующаяся
+                                        на культурном наследии и традициях коренных народов Камчатки. Она проводит увлекательные экскурсии по
+                                        историческим местам, рассказывая о культуре, обычаях и образе жизни местных жителей. Обещаем, будет интересно!</p>
+                                    <img class="guides__image" src="images/gid3.png" alt="Гид Александра" width="220" height="290">
+                                </div>
+                            </div>
+
+                            <!-- Слайд 4 -->
+                            <div class="swiper-slide">
+                                <div class="guide-card">
+                                    <span class="guides__name">Максим</span>
+                                    <p class="guides__description">Профессиональный гид-альпинист с 15-летним опытом восхождения на 
+                                        вулканы Камчатки. Организует трекинговые маршруты для новичков и сложные экспедиции для опытных 
+                                        туристов. Его экскурсии — это впечатляющие панорамы с вершин, но и глубокое понимание вулканической активности региона.</p>
+                                    <img class="guides__image" src="images/gid4.jpg" alt="Гид Максим" width="220" height="290">
+                                </div>
+                            </div>
+
+                            <!-- Слайд 5 -->
+                            <div class="swiper-slide">
+                                <div class="guide-card">
+                                    <span class="guides__name">Павел</span>
+                                    <p class="guides__description">Вулканолог, превративший свои научные знания в 
+                                        увлекательные экспедиции. Его экскурсии — это не только понимание геологических 
+                                        процессов, которые он умеет объяснять просто и интересно, но и завораживающие виды. Он проводит группы по красивейшим лавовым 
+                                        пещерам и минеральным источникам.</p>
+                                    <img class="guides__image" src="images/gid5.jpg" alt="Гид Павел" width="220" height="290">
+                                </div>
+                            </div>
+
+                            <!-- Слайд 6 -->
+                            <div class="swiper-slide">
+                                <div class="guide-card">
+                                    <span class="guides__name">Сергей</span>
+                                    <p class="guides__description">Сертифицированный гид и исследователь Камчатки, специализирующийся 
+                                        на природном и культурном многообразии региона. Он сопровождает путешественников в уникальные места 
+                                        полуострова, раскрывая тайны древних вулканов, диких рек и бескрайней тундры. Обязательно присоединяйтесь!</p>
+                                    <img class="guides__image" src="images/gid6.jpg" alt="Гид Сергей" width="220" height="290">
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <!-- Элементы управления Swiper -->
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
                 </section>
-            </div>
         </main>
 
         <footer class="footer container">
@@ -153,7 +206,7 @@
         </div>
         <!--/ Форма -->
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 
